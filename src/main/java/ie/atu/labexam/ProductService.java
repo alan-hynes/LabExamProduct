@@ -1,12 +1,11 @@
 package ie.atu.labexam;
 
-import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+public class ProductService {
+    void addProduct(){
+        this.addProduct = addProduct;
 
-@FeignClient(name = "product-service-1", url = "http:localhost:8082")
-public interface ProductServiceClient {
-    @PostMapping("/confirm")
-    String someProducts(@RequestBody AddProduct addProduct,
-                        @RequestBody GetProductById getProductById);
+    }
+    void getProductbyID(){
+        this.getProductID = getProductID;
+    }
 }

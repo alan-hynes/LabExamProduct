@@ -26,8 +26,8 @@ public class ProductController {
         String confirm = productServiceClient.someDetails(productDetails);
         Map<String, String> productMessage = new HashMap<>();
         productMessage.put("productId" + productDetails.getProductId() + "productName",
-                "{name}" + "quantity" + productDetails.getQuantity() +
-                        "warehouseId" + productDetails.getWarehouseId());
+                            "{name}" + "quantity" + productDetails.getQuantity() +
+                            "warehouseId" + productDetails.getWarehouseId());
         return productMessage;
     }
 }
