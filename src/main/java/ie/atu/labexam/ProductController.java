@@ -24,8 +24,10 @@ public class ProductController {
     @PostMapping("/confirm-and-register")
     public Map<String, String> confirmAndRegister(@RequestBody ProductDetails productDetails) {
         String confirm = productServiceClient.someDetails(productDetails);
-        Map <String, String> responseMessage = new HashMap<>();
-        responseMessage.put("message", confirm);
-        return responseMessage;
+        Map<String, String> productMessage = new HashMap<>();
+        productMessage.put("productId" + productDetails.getProductId() + "productName",
+                "{name}" + "quantity" + productDetails.getQuantity() +
+                        "warehouseId" + productDetails.getWarehouseId());
+        return productMessage;
     }
 }
